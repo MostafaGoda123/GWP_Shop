@@ -356,8 +356,9 @@ article.active {
    top: 2rem;
    left: 50%;
    transform: translateX(-50%);
-   width: 11rem;
-   height: 11rem;
+   width: 13rem;
+   height: 13rem;
+   padding : 1rem ;
    flex-wrap: wrap ;
    gap: 1rem;   }
 .accounts .icons i {
