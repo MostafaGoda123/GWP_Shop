@@ -1,0 +1,355 @@
+:root {
+   --greenColor : #053E47 ;
+   --yellowColor : #FAC845 ;   }
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;   }
+html {
+   font-size: 62.5%;
+   font-family: sans-serif;   }
+@media (max-width : 768px) {
+   html {
+      font-size: 43.75%;
+   }   }
+ul {
+   list-style: none;   }
+a {
+   text-decoration: none;   }
+section {
+   padding: 10vh 10%;   }
+/*---------------------*/
+header {
+   background-color: var(--greenColor);
+   width: 100%; 
+   padding: 0 10%;     }
+nav {
+   height: 10vh;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;   }
+.nav2 {
+   border-top: 1px solid var(--yellowColor);
+   border-bottom: 1px solid var(--yellowColor);   }
+.nav1 select {
+   padding: 0.5rem 1rem;
+   margin: 0 0.5rem;
+   font-size: 1.8rem;
+   color: white;
+   background-color: var(--greenColor);
+   border: 1px solid white;
+   outline: none;
+   border-radius: 1rem;   }
+.nav1 ul {
+   display: flex;
+   gap: 1rem;   }
+.nav1 ul li {
+   line-height: 10vh;  }
+.nav1 ul li a {
+   color: white;
+   font-size: 1.8rem;
+   transition: 0.4s;   }
+.nav1 ul li a.active ,
+.nav1 ul li a:hover {
+   color: var(--yellowColor);   }
+.nav2 h1 {
+   font-size: 3rem;
+   color: white;   }
+.nav2 h1 span {
+   color: var(--yellowColor);   }
+.nav2 .ser {
+   width: 30rem;
+   height: 6vh;
+   position: relative;   }
+.nav2 .ser i {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   left: 1rem;
+   font-size: 1.8rem;   }
+.nav2 .ser input {
+   width: 100%;
+   height: 100%;
+   background-color: white;
+   border-radius: 1rem;
+   font-size: 1.8rem;
+   border: none;
+   outline: none;
+   padding-left: 3.5rem;   }
+.nav2 .ser input:focus {
+   border: 1px solid var(--yellowColor);   }
+.nav2 .icons {
+   position: relative;   }
+.nav2 .icons::before {
+   content: "0";
+   position: absolute;
+   top: -1rem;
+   right: -1rem;
+   width: 2rem;
+   height: 2rem;
+   border-radius: 50%;
+   background-color: var(--yellowColor);
+   font-size: 2rem;
+   color: white;
+   text-align: center;
+   line-height: 2rem;   }
+.nav2 .icons i {
+   font-size: 2rem;
+   color: white;
+   cursor: pointer;
+   transition: 0.4s;
+   margin: 0.5rem ;   }
+.nav2 .icons i:hover {
+   color: var(--yellowColor);   }
+.nav3 ul {
+   display: flex;
+   margin: 0 auto;
+   gap: 1rem;   }
+.nav3 ul li a {
+   display: block;
+   font-size: 2rem;
+   color: white ;
+   position: relative;
+   line-height: 10vh;    }
+.nav3 ul li a.active ,
+.nav3 ul li a:hover {
+   color: var(--yellowColor);   }
+.nav3 ul li a.active::before {
+   content: "";
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   border-width: 1rem;
+   border-style: solid;
+   border-color: transparent transparent white transparent ;   }
+@media (max-width : 768px ) {
+   .nav2 .ser {
+      width: 20rem;
+   }
+   .nav2 .icons {
+      display: none;
+   }   }
+/*-----------------------*/
+.account {
+   position: relative;   }
+.account .icons {
+   position: absolute;
+   top: 90%;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 9rem;
+   height: 9rem;
+   display: none;
+   flex-wrap: wrap;
+   gap: 1rem;   }
+.account .icons i {
+   font-size: 2rem;
+   border-radius: 50%;
+   color: white;
+   width: 4rem;
+   line-height: 4rem;
+   text-align: center;
+   cursor: pointer;
+   transition: 0.4s;   }
+.account .icons i:hover {
+   font-size: 2.2rem ;   }
+.account .icons i.f {
+   background-color: #1774EE ;   }
+.account .icons i.i {
+   background-color: #E74983 ;   }
+.account .icons i.y {
+   background-color: #FD0000 ;   }
+.account .icons i.t {
+   background-color: #1DA2F2 ;   }
+.account:hover .icons ,
+.account .icons:hover {
+   display: flex;   }
+/*-------------------*/
+.about h1 {
+   color: var(--greenColor);
+   font-size: 5rem;
+   width: fit-content;
+   margin: 0 auto 2.5rem;
+   padding-bottom: 0.5rem;
+   border-bottom: 2px dotted var(--yellowColor);   }
+.about h2 {
+   font-size: 2.5rem;
+   margin-bottom: 5rem;
+   text-align: center;
+   color: rgba(5, 62, 71, 0.9);   }
+.about .boxes {
+   display: grid;
+   grid-template-columns: repeat(auto-fill , minmax(250px,1fr));
+   gap: 3rem;   }
+.about .box  {
+   padding: 2rem;
+   border-radius: 2rem;
+   border: 1px solid var(--yellowColor);
+   box-shadow: 0 0 1rem var(--yellowColor);
+   cursor: pointer;
+   transition: 0.4s;
+   text-align: center;   }
+.about .box:hover  {
+   transform: translateY(-1.5rem);
+   box-shadow: 0.5rem 0.5rem 1rem var(--yellowColor);   }
+.about .box i  {
+   font-size: 4rem;
+   margin-bottom: 1.5rem;
+   color: var(--greenColor);   }
+.about .box h3 {
+   font-size: 2rem;
+   margin-bottom: 1.5rem;
+   color: rgba(5, 62, 71, 0.8);   }
+.about .box p {
+   color: rgba(5, 62, 71, 0.5);
+   line-height: 1.6;
+   font-size: 1.7rem;   }
+/*-------------------*/
+.logIn , .signIn {
+   width: 40rem;
+   height: 50rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 3rem;
+   text-align: center;
+   background-color: var(--yellowColor);
+   border-radius: 2rem;
+   border: 2px solid var(--greenColor);
+   padding: 2rem;
+   margin: 0 auto;   }
+.logIn_SignIn h1 span {
+   color: var(--greenColor);   }
+.logIn_SignIn h1 {
+   font-size: 2.5rem;
+   color: rgba(5, 62, 71, 0.8);   }
+.logIn_SignIn .inp {
+   width: 100%;
+   position: relative;
+   height: 4rem;   }
+.logIn_SignIn .inp i {
+   position: absolute;
+   left: 1rem;
+   top: 50%;
+   transform: translateY(-50%);
+   font-size: 2.5rem;
+   color: var(--greenColor);   }
+.logIn_SignIn .inp input {
+   width: 100%;
+   border-radius: 1rem;
+   line-height: 4rem;
+   background: white;
+   padding-left: 4rem;
+   font-size: 2rem;
+   color: var(--greenColor);
+   border: 1px solid var(--greenColor);
+   outline: none ;   }
+.logIn_SignIn button {
+   padding: 1rem 2rem;
+   font-size: 2rem;
+   width: 100%;
+   background-color: var(--greenColor);
+   color: white;
+   cursor: pointer;
+   transition: 0.4s;
+   border: none ;
+   outline: none;
+   border-radius: 1rem;   }
+.logIn_SignIn button:hover {
+   background-color: rgba(5, 62, 71, 0.8);   }
+.logIn_SignIn p {
+   font-size: 1.8rem;
+   color: rgba(5, 62, 71, 0.9);   }
+.logIn_SignIn p span {
+   cursor: pointer;
+   font-weight: bold;
+   transition: 0.4s;
+   color: var(--greenColor);   }
+.logIn_SignIn p span:hover {
+   text-decoration: underline;   }
+.logIn.hide ,
+.signIn.hide {
+   display: none;   }
+/*-------------------*/
+.brand {
+   margin-bottom: 5vh ;   }
+.brand h1 {
+   font-size: 3rem;
+   color: var(--greenColor);
+   border-bottom: 1px solid var(--yellowColor);
+   margin-bottom: 3rem;   }
+.brand .boxes {
+   display: grid;
+   grid-template-columns: repeat(auto-fill , minmax(250px , 1fr)) ;
+   gap: 2.5rem;   }
+.brand .box {
+   border: 1px solid var(--greenColor);
+   transition: 0.4s ;
+   cursor: pointer;   }
+.brand .box:hover {
+   transform: translateY(-1rem);
+   border-color: var(--yellowColor);   }
+.brand .box img {
+   width: 100%;   }
+.brand .box h3 {
+   font-size: 2rem;
+   padding: 1.5rem;
+   color: var(--greenColor);   }
+.brand .box .stars {
+   font-size: 2rem;
+   padding: 0 1.5rem 1.5rem ;
+   color: var(--yellowColor);   }
+.brand .box .price {
+   font-size: 2rem;
+   padding: 1.5rem;
+   border-top: 1px solid #ccc;
+   border-bottom: 1px solid #ccc;
+   display: flex; 
+   justify-content: space-between;
+   align-items: center ;
+   color: red;   }
+.brand .box .price .n {
+   color: var(--greenColor);
+   text-decoration: line-through;   }
+.brand .box button {
+   display: block;
+   margin: 1rem auto;
+   padding: 1rem 2rem;
+   border-radius: 1rem;
+   font-size: 2rem;
+   background-color: var(--yellowColor);
+   border: none;
+   outline: none;
+   cursor: pointer;
+   transition: 0.4s;   }
+.brand .box button:hover {
+   background-color: #fcb604;   }
+/*-------------------*/
+.electronics .brand .boxes {
+   grid-template-columns: repeat( auto-fill , minmax(300px , 1fr) );   }
+/*-------------------*/
+section {
+   display: none;   }
+section.active {
+   display: block;   }
+/*----------------------*/
+footer {
+   height: 15vh;
+   background-color: var(--greenColor);
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   flex-direction: column;
+   color: white;
+   font-size: 2.5rem;
+   letter-spacing: 1px;   }
+footer i {
+   margin: 0 1rem;
+   transition: 0.4s;
+   cursor: pointer;   }
+footer i:hover {
+   color: var(--yellowColor);   }
+/*----------------------*/
